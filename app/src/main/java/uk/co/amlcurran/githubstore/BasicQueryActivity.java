@@ -41,8 +41,6 @@ public class BasicQueryActivity extends ActionBarActivity implements TitleListen
         githubApi = new GithubApi(new VolleyClient(Volley.newRequestQueue(BasicQueryActivity.this)), new GsonJsonConverter(), new ViewControllerErrorListener());
         transitionManager = new TransitionManager(BasicQueryActivity.this, (ViewGroup) findViewById(R.id.content));
         transitionManager.setTitleListener(this);
-
-        showReleases(new BasicProjectItem("funkyandroid", "iosched"));
     }
 
     @Override

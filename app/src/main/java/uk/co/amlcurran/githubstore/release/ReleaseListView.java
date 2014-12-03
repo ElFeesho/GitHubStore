@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import uk.co.amlcurran.githubstore.MarkDownHelper;
 import uk.co.amlcurran.githubstore.R;
 
 class ReleaseListView {
@@ -85,6 +86,7 @@ class ReleaseListView {
         latestVersionText.setText(formatTitle(latestRelease));
         latestVersionChip.setVisibility(View.VISIBLE);
         latestChanges.setText(formatDescription(latestRelease));
+        MarkDownHelper.markDown(latestChanges);
     }
 
     private CharSequence formatDescription(Release latestRelease) {
